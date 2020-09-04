@@ -13,7 +13,11 @@ bot.on("login", () => {
 
 bot.on("chat", (msgData, packetInfo) => {
   var message = processMsg(JSON.parse(msgData.message));
-  console.log(processMsg(JSON.parse(msgData.message)).split(": ")[1]);
+  if(message.split(": ")[1].startsWith("$echo") {
+     
+     bot.write('chat', {message: message.split(": $echo ")[1]});   
+     
+  }
 
 });
 
